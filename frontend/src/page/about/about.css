@@ -1,0 +1,72 @@
+.about {
+  display: block;
+  justify-content: center;
+}
+section {
+  text-align: justify;
+}
+h1 {
+  margin-top: 3rem;
+  color: #0652dd;
+}
+section > div {
+  margin-top: 6rem;
+}
+
+section > div h2 {
+  color: #1289a7;
+}
+
+.Mission {
+  display: flex;
+}
+.Mission > div {
+  margin-top: 10rem;
+  width: 30rem;
+}
+
+.Our_values {
+  display: flex;
+}
+
+.Our_values > div {
+  margin-top: 8rem;
+  width: 30rem;
+}
+.Mission img {
+  position: relative;
+  bottom: 2rem;
+  width: 30rem;
+}
+
+.Our_values img {
+  width: 30rem;
+}
+@media only screen and (max-width: 1000px) {
+  .Mission {
+    display: block;
+  }
+
+  .Our_values {
+    display: block;
+  }
+  .Our_values > div {
+    padding: 5px;
+    width: 100%;
+  }
+  .Mission > div {
+    margin-top: 2rem;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .Mission img {
+    width: 100%;
+    position: relative;
+    bottom: 0rem;
+  }
+
+  .Our_values img {
+    width: 100%;
+  }
+}

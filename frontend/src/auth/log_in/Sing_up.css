@@ -1,0 +1,8 @@
+.info-01,
+.info-02 > input,
+.info-01 select {
+  width: 25rem;
+}
+.form-group_register {
+  display: flex;
+}

@@ -1,0 +1,18 @@
+.contact {
+  margin-top: 5rem;
+}
+.contact div form button {
+  position: relative;
+  left: 8rem;
+}
+
+.contact textarea {
+  height: 15rem;
+  width: 100%;
+  resize: none;
+  overflow: auto;
+}
+
+.contact .form_Contact .form-group {
+  border: none;
+}

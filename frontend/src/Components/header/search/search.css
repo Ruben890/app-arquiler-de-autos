@@ -1,0 +1,47 @@
+.search {
+  background-color: #1289a7;
+}
+.search input::placeholder {
+  padding: 8px;
+  font-size: 18px;
+}
+.search form {
+  display: flex;
+}
+.search input {
+  margin-left: 2rem;
+  outline: none;
+  border: none;
+  width: 50%;
+}
+
+.btn_option option {
+  font-size: 18px;
+}
+
+.options .btn_option {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .search form {
+    display: block;
+  }
+
+  .search input {
+    margin-left: 0px;
+    padding: 12px;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .search .options {
+    white-space: 100%;
+    position: relative;
+    left: 1rem;
+  }
+}
