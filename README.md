@@ -14,20 +14,20 @@ http://127.0.0.1:8000/swagger/
 <hr>
 <div>
  <h4> El documento  va a tener los siguientes datos:</h4>
- <p>
+ <ul>
  SECURITY WARNING: 
-🔐SECRET_KEY = " "
+  <li>🔐SECRET_KEY = " "</li>
 
 SECURITY WARNING: don't run with debug turned on in production!
-💻DEBUG = True/False
+  <li>💻DEBUG = True/False</li>
 
 📄Database information
-NAME = 'Backend_autos_arquiler'
-USER = ''
-🔐PASSWORD =  ''
-HOST =  'localhost'
-PORT = ' '
- </p>
+  <li>NAME = 'Backend_autos_arquiler'</li>
+  <li>USER = ' '</li>
+  <li>🔐PASSWORD = ' '</li>
+  <li>HOST = 'localhost'</li>
+  <li>PORT = ' '</li>
+ </ul>
 </div>
 <hr>
 
