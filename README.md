@@ -12,9 +12,10 @@ http://127.0.0.1:8000/swagger/
 se encuentra el proyecto usando la consola, para luego ejecutar los siguientes comandos:</p>
 <ul>
 <p>para migrar los datos a la base de datos en MYSQL</p>
+ <li>python manage.py migrate</li>
 <hr>
-<li>python manage.py migrate</li>
 <p>Para hacer que la aplicación arranque la aplicación</p>
+ <li>python manage.py runserver</li>
 <hr>
-<li>python manage.py runserver</li>
+
 </ul>
