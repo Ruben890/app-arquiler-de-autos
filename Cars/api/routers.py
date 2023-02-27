@@ -4,6 +4,6 @@ router = DefaultRouter()
 
 router.register(r'car', ViewCars)
 router.register(r'year_cars', ViewYear)
-router.register(r'Goy_cars', ViewGuy)
+router.register(r'Guy_cars', ViewGuy)
 router.register(r'branch_cars', ViewBranch)
 urlpatterns = router.urls
