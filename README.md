@@ -12,8 +12,8 @@ http://127.0.0.1:8000/swagger/
 se encuentra el proyecto usando la consola, para luego ejecutar los siguientes comandos:</p>
 
 <div>
-<p>Ejemplo</p>
-<p> cd Documents/proyecto Django </p>
+<p>Ejemplo:</p>
+<p> cd ./Documents/proyecto Django... </p>
 </div>
 
 <hr>
