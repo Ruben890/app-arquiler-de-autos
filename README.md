@@ -7,7 +7,10 @@ proyecto-arquiler-de-autos
 
 ## url:principal
 http://127.0.0.1:8000/swagger/
+
 <br>
+<br>
+
 ## El siguiente comando instalará los paquetes de acuerdo con el archivo de configuración requirements.txt
 $ pip install -r requirements.txt
 
