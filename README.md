@@ -15,13 +15,13 @@ http://127.0.0.1:8000/swagger/
 <div>
  <h4> El documento  va a tener los siguientes datos:</h4>
  <ul>
- SECURITY WARNING: 
+  <p>###SECURITY WARNING: </p>
   <li>🔐SECRET_KEY = " "</li>
 
-SECURITY WARNING: don't run with debug turned on in production!
+  <p>###SECURITY WARNING: don't run with debug turned on in production!</p>
   <li>💻DEBUG = True/False</li>
 
-📄Database information
+  <p>###📄Database information</p>
   <li>NAME = 'Backend_autos_arquiler'</li>
   <li>USER = ' '</li>
   <li>🔐PASSWORD = ' '</li>
