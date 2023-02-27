@@ -39,7 +39,7 @@ class Profiles(AbstractBaseUser):
         max_length=100, null=False, blank=False, verbose_name="last_name"
     )
     image = models.ImageField(
-        upload_to="users_img", null=True, blank=True, verbose_name="image/users"
+        upload_to="image/users", null=True, blank=True, verbose_name="user image"
     )
     user_active = models.BooleanField(default=True)
     user_admin = models.BooleanField(default=False)
