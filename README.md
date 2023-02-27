@@ -10,6 +10,8 @@ http://127.0.0.1:8000/swagger/
 <h3>El siguiente comando instalará los paquetes de acuerdo con el archivo de configuración requirements.txt</h3>
 <p>$ pip install -r requirements.txt</p>
 
+<br>
+<br>
 <h2>Debe crear un documento llamado 📄.env, el cual va a 
  tener en su interior la 🔐Srecret_key,  DEBUG y la 📝información de la base de datos.
 </h2>
