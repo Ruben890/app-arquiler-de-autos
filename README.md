@@ -1,6 +1,6 @@
 # proyecto-arquiler-de-autos
-<h1>Django Version:4.1.7</h1>
-<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" title="Django"/>
+<h1><img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" title="Django"/> Version:4.1.7</h1>
+
 proyecto-arquiler-de-autos
 
 
@@ -13,8 +13,7 @@ se encuentra el proyecto usando la consola, para luego ejecutar los siguientes c
 <ul>
 <p>para migrar los datos a la base de datos en MYSQL</p>
 <hr>
-<lil>python manage.py migrate</li>
-
+<li>python manage.py migrate</li>
 <p>Para hacer que la aplicación arranque la aplicación</p>
 <hr>
 <li>python manage.py runserver</li>
