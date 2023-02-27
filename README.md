@@ -18,10 +18,10 @@ se encuentra el proyecto usando la consola, para luego ejecutar los siguientes c
 
 <hr>
 <ul>
-<br>Para migrar los datos a la base de datos en MySQLL</br>
+<h3>Para migrar los datos a la base de datos en MySQLL</h3>
  <li>python manage.py migrate</li>
 <hr>
-<p>Para hacer que la aplicación arranque la aplicación</p>
+<h3>Para hacer que la aplicación arranque la aplicación</h3>
  <li>python manage.py runserver</li>
 <hr>
 
