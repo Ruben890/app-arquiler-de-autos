@@ -17,13 +17,13 @@ http://127.0.0.1:8000/swagger/
  <ul>
   <p>###SECURITY WARNING: </p>
   <li>🔐SECRET_KEY = " "</li>
+  <hr>
   
   <p>###SECURITY WARNING: don't run with debug turned on in production!</p>
-  
   <li>💻DEBUG = True/False</li>
+  <hr>
 
   <p>###📄Database information</p>
-  
   <li>NAME = 'Backend_autos_arquiler'</li>
   <li>USER = ' '</li>
   <li>🔐PASSWORD = ' '</li>
