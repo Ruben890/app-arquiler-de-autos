@@ -8,20 +8,20 @@ proyecto-arquiler-de-autos
 ## url:principal
 http://127.0.0.1:8000/swagger/
 
-<h1>Primero debe crear un documento llamado 📄.env, el cual va a 
+<h2>Primero debe crear un documento llamado 📄.env, el cual va a 
  tener en su interior la 🔐Srecrey_key,  DEBUG y la 📝información de la base de datos.
-</1>
+</h2>
 <hr>
 <div>
  <h4> El documento  va a tener los siguientes datos:</h4>
  <p>
- #SECURITY WARNING: 
+ SECURITY WARNING: 
 🔐SECRET_KEY = " "
 
-#SECURITY WARNING: don't run with debug turned on in production!
+SECURITY WARNING: don't run with debug turned on in production!
 💻DEBUG = True/False
 
-#📄Database information
+📄Database information
 NAME = 'Backend_autos_arquiler'
 USER = ''
 🔐PASSWORD =  ''
