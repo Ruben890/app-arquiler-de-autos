@@ -7,11 +7,14 @@ proyecto-arquiler-de-autos
 
 ## url:principal
 http://127.0.0.1:8000/swagger/
-<h1>Comando para arancar Django rest frameowr</h1>
+<h1>Comando para arrancar Django Rest  Frameowork</h1>
 <p>Para poder arrancar Django rest Framework primero tiene que dirigirse a la carpeta donde
 se encuentra el proyecto usando la consola, para luego ejecutar los siguientes comandos:</p>
+<h2>Ejemplo</h2>
+<p> cd Documents/proyecto Django </p>
+
 <ul>
-<p>para migrar los datos a la base de datos en MYSQL</p>
+<p>Para migrar los datos a la base de datos en MySQLL</p>
  <li>python manage.py migrate</li>
 <hr>
 <p>Para hacer que la aplicación arranque la aplicación</p>
