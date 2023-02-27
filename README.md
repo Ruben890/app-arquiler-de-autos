@@ -20,7 +20,7 @@ se encuentra el proyecto usando la consola, para luego ejecutar los siguientes c
 <ul>
 <h3>Para migrar los datos a la base de datos en MySQL</h3>
  <small>
- ‼️🔴🟥Para poder migrar los datos primero debe crear la base de datos. El documento SQL para crear la base de datos se encuentra en el repositorio como 📄myslq.sql.
+ 🔴🟥‼️Para poder migrar los datos primero debe crear la base de datos. El documento SQL para crear la base de datos se encuentra en el repositorio como 📄myslq.sql.
   ‼️🔴🟥
  </small>
  
