@@ -10,9 +10,10 @@ http://127.0.0.1:8000/swagger/
 <h1>Comando para arrancar Django Rest  Frameowork</h1>
 <p>Para poder arrancar Django rest Framework primero tiene que dirigirse a la carpeta donde
 se encuentra el proyecto usando la consola, para luego ejecutar los siguientes comandos:</p>
-<h2>Ejemplo</h2>
+<p>Ejemplo</p>
 <p> cd Documents/proyecto Django </p>
 
+<hr>
 <ul>
 <p>Para migrar los datos a la base de datos en MySQLL</p>
  <li>python manage.py migrate</li>
