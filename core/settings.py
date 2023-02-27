@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'rest_framework',
     'corsheaders',
-    'Cars'
+    'Cars',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,9 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:4200'
 ]
+
+AUTH_USER_MODEL = "users.Profiles"
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
