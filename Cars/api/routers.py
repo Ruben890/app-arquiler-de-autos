@@ -1,7 +1,9 @@
 from rest_framework.routers import DefaultRouter
-from .api import ViewCars
+from .api import ViewCars, ViewBranch, ViewGuy, ViewYear
 router = DefaultRouter()
 
-router.register(r'', ViewCars)
-
+router.register(r'car', ViewCars)
+router.register(r'year_cars', ViewYear)
+router.register(r'Goy_cars', ViewGuy)
+router.register(r'branch_cars', ViewBranch)
 urlpatterns = router.urls
