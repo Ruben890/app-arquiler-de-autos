@@ -1,7 +1,10 @@
 # proyecto-arquiler-de-autos
+<h1>Django Version:4.1.7</h1>
+<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" title="Django"/>
 proyecto-arquiler-de-autos
 
-<img src"https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" title="Django" />
+
+
 ## url:principal
 http://127.0.0.1:8000/swagger/
 <h1>Comando para arancar Django rest frameowr</h1>
