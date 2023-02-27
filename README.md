@@ -8,7 +8,10 @@ proyecto-arquiler-de-autos
 ## url:principal
 http://127.0.0.1:8000/swagger/
 
-<h2>Primero debe crear un documento llamado 📄.env, el cual va a 
+<h1>El siguiente comando instalará los paquetes de acuerdo con el archivo de configuración requirements.txt</h1>
+<p>$ pip install -r requirements.txt</p>
+
+<h2>Debe crear un documento llamado 📄.env, el cual va a 
  tener en su interior la 🔐Srecret_key,  DEBUG y la 📝información de la base de datos.
 </h2>
 <hr>
