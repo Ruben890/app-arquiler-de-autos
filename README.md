@@ -18,7 +18,7 @@ se encuentra el proyecto usando la consola, para luego ejecutar los siguientes c
 
 <hr>
 <ul>
-<p>Para migrar los datos a la base de datos en MySQLL</p>
+<br>Para migrar los datos a la base de datos en MySQLL</br>
  <li>python manage.py migrate</li>
 <hr>
 <p>Para hacer que la aplicación arranque la aplicación</p>
