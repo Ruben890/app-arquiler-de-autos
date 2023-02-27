@@ -18,11 +18,10 @@ export const Contact = () => {
                     <p style={{ textAlign: "justify" }} >Что такое Lorem Ipsum?
                         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.<p>Tel:<strong>849-41568-892</strong></p> </p>
                 </div>
-                <section className='d-flex'>
+                <section>
                     <img src={Image_Contact} alt="contact" width="600px" height="600px"></img>
                     <div className='form_Contact w-100'>
-
-                        <form className='form-group p-3'>
+                        <form className='form-group'>
                             <div className='d-flex'>
                                 <input type='text' className='form-control m-3 ' name='email' placeholder='Email' />
                                 <input type='text' className='form-control m-3' disabled value="Empresa@gamil.com" />

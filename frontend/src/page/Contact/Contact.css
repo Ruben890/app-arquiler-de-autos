@@ -16,3 +16,35 @@
 .contact .form_Contact .form-group {
   border: none;
 }
+.contact section{
+  display: flex;
+}
+@media only screen and (max-width: 1000px){
+  .contact section{
+    display: block;
+  }
+
+  .contact section img {
+    width: 400px;
+    height: 400px;
+  }
+
+   .form_Contact{
+    position:relative;
+    bottom: 5rem;
+  }
+  .form_Contact .btn {
+   cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px){
+    .form_Contact .btn {
+      position: relative;
+      left: 6rem ;
+     }
+     .contact section img {
+      width: 350px;
+      height: 400px;
+    }
+  }
+}

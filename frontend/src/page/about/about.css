@@ -2,18 +2,18 @@
   display: block;
   justify-content: center;
 }
-section {
+.about section {
   text-align: justify;
 }
-h1 {
+.about h1 {
   margin-top: 3rem;
   color: #0652dd;
 }
-section > div {
+.about section > div {
   margin-top: 6rem;
 }
 
-section > div h2 {
+.about section > div h2 {
   color: #1289a7;
 }
 
