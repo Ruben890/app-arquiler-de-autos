@@ -13,20 +13,22 @@ se encuentra el proyecto usando la consola, para luego ejecutar los siguientes c
 
 <div>
 <p>Ejemplo:</p>
-<p> cd ./Documents/proyecto Django... </p>
+<p>⌨️cd ./Documents/proyecto Django...💻</p>
 </div>
 
 <hr>
 <ul>
 <h3>Para migrar los datos a la base de datos en MySQL</h3>
  <small>
- para poder migrar los datos priero debe crear la base de datos.
- El documentos SQl para crear la base de datos se encuetra en el repositorio como myslq.sql.
+ ‼️🔴🟥para poder migrar los datos priero debe crear la base de datos.
+ El documentos SQl para crear la base de datos se encuetra en el repositorio como 📄myslq.sql.
+  ‼️🔴🟥
  </small>
- <li>python manage.py migrate</li>
+ 
+ <li>⌨️python manage.py migrate</li>
 <hr>
 <h3>Para hacer que la aplicación arranque.</h3>
- <li>python manage.py runserver</li>
+ <li>⌨️python manage.py runserver</li>
 <hr>
 
 </ul>
