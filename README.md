@@ -8,12 +8,12 @@ proyecto-arquiler-de-autos
 ## url:principal
 http://127.0.0.1:8000/swagger/
 
-<p>Primero debe crear él un documento llamado 📄.env, el cual va a 
+<h1>Primero debe crear un documento llamado 📄.env, el cual va a 
  tener en su interior la 🔐Srecrey_key,  DEBUG y la 📝información de la base de datos.
-</p>
+</1>
 
 <div>
- <h1> El documento  va a tener los siguientes datos:</h1>
+ <h3> El documento  va a tener los siguientes datos:</h3>
  ###? SECURITY WARNING: 
 🔐SECRET_KEY = " "
 
