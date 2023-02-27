@@ -8,7 +8,7 @@ proyecto-arquiler-de-autos
 ## url:principal
 http://127.0.0.1:8000/swagger/
 
-<h1>El siguiente comando instalará los paquetes de acuerdo con el archivo de configuración requirements.txt</h1>
+##El siguiente comando instalará los paquetes de acuerdo con el archivo de configuración requirements.txt
 <p>$ pip install -r requirements.txt</p>
 
 <h2>Debe crear un documento llamado 📄.env, el cual va a 
