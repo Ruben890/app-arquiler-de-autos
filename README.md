@@ -18,7 +18,11 @@ se encuentra el proyecto usando la consola, para luego ejecutar los siguientes c
 
 <hr>
 <ul>
-<h3>Para migrar los datos a la base de datos en MySQLL</h3>
+<h3>Para migrar los datos a la base de datos en MySQL</h3>
+ <small>
+ para poder migrar los datos priero debe crear la base de datos.
+ El documentos SQl para crear la base de datos se encuetra en el repositorio como myslq.sql.
+ </small>
  <li>python manage.py migrate</li>
 <hr>
 <h3>Para hacer que la aplicación arranque.</h3>
