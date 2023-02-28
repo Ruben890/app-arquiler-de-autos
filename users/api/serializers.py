@@ -5,13 +5,16 @@ from users.models import Profiles
 class ProfilesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profiles
-        fields = "__all__"
+        fields = ['username', 'name', 'last_name','email', 'password', ]
+        extra_kwargs = {'write_only': True}
 
     def create(self, validated_data):
-        user = Profiles(**validated_data)
-        user.set_password(validated_data["password"])
-        user.save()
-        return user
+        password = validated_data['password', None]
+        instance = self.Meta.model(**validated_data)
+        if password is not None:
+            instance.set_password(password)
+        instance.save()
+        return instance
 
     def update(self, instance, validated_data):
         updated_user = super().update(instance, validated_data)
