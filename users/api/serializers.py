@@ -19,3 +19,10 @@ class ProfilesSerializer(serializers.ModelSerializer):
         updated_user.set_password(validated_data["password"])
         updated_user.save()
         return updated_user
+    
+class Login(ProfilesSerializer):
+    class Meta:
+        model = Profiles
+        fields = ['email', 'password', ]
+        extra_kwargs = {'write_only': True}
+    
