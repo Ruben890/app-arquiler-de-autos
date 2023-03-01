@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed
 
-import  jwt
+import jwt
 import datetime
 from .serializers import ProfilesSerializer, Login
 from users.models import Profiles
@@ -47,10 +47,32 @@ class Login(viewsets.GenericViewSet):
             "iat": datetime.datetime.utcnow()  # * time in which the token was created
         }
         # ?generic token
-        token = jwt.encode(payload=payload, key='secret',algorithm="HS256")
-        return Response({
+        token = jwt.encode(payload=payload, key='secret', algorithm="HS256")
+        # ? configuration cookie
+        response = Response()
+        response.set_cookie(key='jwt', value=token, httponly=True)
+
+        response.data = {
             "http": 200,
             "message": "login Successful",
             "jwt": token
+        }
+        return response
 
-        })
+
+class UsersViw(viewsets.GenericViewSet):
+
+    def list(self, request):
+        ###? verifying cookie token
+        token = request.COOKIES.get('jwt')
+        if not token:
+            raise AuthenticationFailed('Authentication failed')
+        try:
+            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            raise AuthenticationFailed('Unauthenticated!')
+        ###? filtering the user who owns the token using the id
+        user = Profiles.objects.filter(id=payload['id']).first()
+        serializer = ProfilesSerializer(user)
+        ###? response to Users who own the token
+        return Response(serializer.data)
