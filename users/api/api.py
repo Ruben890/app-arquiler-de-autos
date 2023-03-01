@@ -66,7 +66,7 @@ class UsersViw(viewsets.GenericViewSet):
         # ? verifying cookie token
         token = request.COOKIES.get('jwt')
         if not token:
-            raise AuthenticationFailed('Authentication failed')
+            raise AuthenticationFailed('Unauthenticated!')
         try:
             payload = jwt.decode(token, 'secret', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
@@ -79,6 +79,7 @@ class UsersViw(viewsets.GenericViewSet):
 
 
 class Logout(viewsets.GenericViewSet):
+    # ? delete the cookie
     def create(self, request):
         response = Response()
         response.delete_cookie('jwt')
