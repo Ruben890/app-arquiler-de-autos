@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed
 
+import jwt, datetime 
 from .serializers import ProfilesSerializer, Login
 from users.models import Profiles
 
@@ -36,5 +37,16 @@ class Login(viewsets.GenericViewSet):
         # ?confirm if the password is correct
         if not user.check_password(password):
             raise AuthenticationFailed("Users password is incorrect")
+        
+        ###?
+        payload  = {
+            "id":  user.id,
+            "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
+            "lat": datetime.datetime.utcnow()
+        }
 
-        return Response(user, status=status.HTTP_202_ACCEPTED)
+        return Response({
+            "http": 200, 
+            "message": "login Successful",
+            
+        })
