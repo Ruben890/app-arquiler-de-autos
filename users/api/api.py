@@ -63,7 +63,7 @@ class Login(viewsets.GenericViewSet):
 class UsersViw(viewsets.GenericViewSet):
 
     def list(self, request):
-        ###? verifying cookie token
+        # ? verifying cookie token
         token = request.COOKIES.get('jwt')
         if not token:
             raise AuthenticationFailed('Authentication failed')
@@ -71,8 +71,19 @@ class UsersViw(viewsets.GenericViewSet):
             payload = jwt.decode(token, 'secret', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed('Unauthenticated!')
-        ###? filtering the user who owns the token using the id
+        # ? filtering the user who owns the token using the id
         user = Profiles.objects.filter(id=payload['id']).first()
         serializer = ProfilesSerializer(user)
-        ###? response to Users who own the token
+        # ? response to Users who own the token
         return Response(serializer.data)
+
+
+class Logout(viewsets.GenericViewSet):
+    def create(self, request):
+        response = Response()
+        response.delete_cookie('jwt')
+        response.data = {
+            "message": "logout Successfully"
+        }
+
+        return response
