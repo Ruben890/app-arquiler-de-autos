@@ -3,10 +3,10 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed
 
-import jwt, datetime 
+import jwt, datetime
 from .serializers import ProfilesSerializer, Login
 from users.models import Profiles
-
+  
 
 class Register(viewsets.GenericViewSet):
     model = Profiles
@@ -38,11 +38,11 @@ class Login(viewsets.GenericViewSet):
         if not user.check_password(password):
             raise AuthenticationFailed("Users password is incorrect")
         
-        ###?
+        ###? Useful load
         payload  = {
-            "id":  user.id,
-            "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
-            "lat": datetime.datetime.utcnow()
+            "id":  user.id, ###* User Identifier ID
+            "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=60),###* Useful life of Token
+            "lat": datetime.datetime.utcnow() ###* time in which the token was created
         }
 
         return Response({
