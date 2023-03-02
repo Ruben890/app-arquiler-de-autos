@@ -1,7 +1,7 @@
 from rest_framework.exceptions import AuthenticationFailed
 import jwt
 import datetime
-from ..models import Profiles
+
 
 def create_auth_token(id):
     return jwt.encode(payload={
