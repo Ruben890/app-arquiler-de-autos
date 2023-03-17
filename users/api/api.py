@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed
 import jwt
-from .authentication import create_auth_token 
+from .authentication import create_auth_token
 from .serializers import ProfilesSerializer, Login
 from users.models import Profiles
 
@@ -41,7 +41,8 @@ class Login(viewsets.GenericViewSet):
         access_token = create_auth_token(user.id)
         # ? configuration cookie
         response = Response()
-        response.set_cookie(key='create_auth_token', value=access_token, httponly=True)
+        response.set_cookie(key='create_auth_token',
+                            value=access_token, httponly=True)
 
         response.data = {
             "http": 200,
@@ -51,6 +52,8 @@ class Login(viewsets.GenericViewSet):
 
 
 class UsersViw(viewsets.GenericViewSet):
+    serializer_class = ProfilesSerializer
+
     def list(self, request):
         # ? verifying cookie token
         token = request.COOKIES.get('create_auth_token')
@@ -65,11 +68,12 @@ class UsersViw(viewsets.GenericViewSet):
         serializer = ProfilesSerializer(user)
         # ? response to Users who own the token
         return Response(serializer.data)
-    
-    
+
 
 class Logout(viewsets.GenericViewSet):
+    serializer_class = ProfilesSerializer
     # ? delete the cookie
+
     def create(self, request):
         response = Response()
         response.delete_cookie('create_auth_token')

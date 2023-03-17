@@ -41,8 +41,8 @@ class Profiles(AbstractBaseUser):
     image = models.ImageField(
         upload_to="image/users", null=True, blank=True, verbose_name="user image"
     )
+    opt = models.CharField(max_length=25, blank=True, null=True, unique=True,)
     is_validate = models.BooleanField(default=False)
-    otp = models.CharField("validation code", max_length=6)
     user_active = models.BooleanField(default=True)
     user_admin = models.BooleanField(default=False)
     objects = UserManager()
