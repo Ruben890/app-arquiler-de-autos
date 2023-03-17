@@ -71,9 +71,7 @@ class UsersViw(viewsets.GenericViewSet):
 
 
 class Logout(viewsets.GenericViewSet):
-    serializer_class = ProfilesSerializer
     # ? delete the cookie
-
     def create(self, request):
         response = Response()
         response.delete_cookie('create_auth_token')
