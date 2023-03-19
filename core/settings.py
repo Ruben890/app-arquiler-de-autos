@@ -17,9 +17,11 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = []
 
+###?striper Secrey_key
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",

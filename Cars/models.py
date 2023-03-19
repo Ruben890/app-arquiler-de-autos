@@ -43,7 +43,7 @@ class cars (models.Model):
     image_car = models.ImageField(
         upload_to="image/cars", null=False, blank=False)
     availability = models.BooleanField("availability car", default=False)
-    price = models.PositiveIntegerField("price car", blank=False, null=False)
+    price = models.DecimalField("price car", max_digits=5, decimal_places=2,blank=False, null=False)
     data = models.DateField("data car", auto_now_add=True, null=True)
     Gearbox = models.CharField(
         "Gearbox car", max_length=150, null=False, blank=False, choices=Gearbox)
