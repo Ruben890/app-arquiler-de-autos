@@ -21,7 +21,7 @@ $ pip install -r requirements.txt
 <br>
 <br>
 <h2>Debe crear un documento llamado 📄.env, el cual va a 
- tener en su interior la 🔐Srecret_key,  DEBUG, SCRAPE KEYS y la 📝información de la base de datos.
+ tener en su interior la 🔐Srecret_key,  DEBUG, SCRIPE KEYS y la 📝información de la base de datos.
 </h2>
 <hr>
 <div>
@@ -36,8 +36,8 @@ $ pip install -r requirements.txt
   <hr>
 
   <p>###SCRAPE_KEYS: </p>
-  <li>🔐SCRAPE_SECRET_KEY = " "</li>
-  <li>🔐SCRAPE_PUBLIC_KEY = " "</li>
+  <li>🔐STRIPE_SECRET_KEY = " "</li>
+  <li>🔐STRIPE_PUBLIC_KEY = " "</li>
   <hr>
   
   <p>###📄Database information</p>
