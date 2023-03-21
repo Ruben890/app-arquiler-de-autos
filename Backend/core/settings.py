@@ -55,8 +55,6 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200'
 ]
 
-SITE_URL = 'http://localhost:3000',
-
 
 AUTH_USER_MODEL = "users.Profiles"
 
