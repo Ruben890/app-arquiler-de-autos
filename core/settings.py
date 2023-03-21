@@ -17,8 +17,9 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = []
 
-###?striper Secrey_key
+###? Stripe Keys
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
 
 
 # Application definition
@@ -47,13 +48,15 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware"
 ]
 
-
 ROOT_URLCONF = "core.urls"
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:4200'
 ]
+
+SITE_URL = 'http://localhost:3000',
+
 
 AUTH_USER_MODEL = "users.Profiles"
 
@@ -134,10 +137,6 @@ MEDIA_ROOT = BASE_DIR / "media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv('EMAIL')
-EMAIL_USE_APPLICATION_CREDENTIALS = True
+###? URLS
+SITE_URL = "http://localhost:3000/"
+API_URL = "http://localhost:8000/"

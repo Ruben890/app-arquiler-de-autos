@@ -33,7 +33,7 @@ class brand_cars(models.Model):
         ordering = ('brand',)
 
 
-class cars (models.Model):
+class Cars (models.Model):
     brand = models.ForeignKey(
         brand_cars, on_delete=models.CASCADE, related_name="brand_car")
     model = models.CharField("model car", max_length=150,
@@ -57,7 +57,7 @@ class cars (models.Model):
                             blank=False, choices=fuel_type_cars)
 
     def __str__(self):
-        return f"{self.brand}:{self.model}"
+        return f"{self.brand}:{self.model}-{self.year}"
 
     class Meta:
         ordering = ("data",)

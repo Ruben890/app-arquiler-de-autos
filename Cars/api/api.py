@@ -1,8 +1,11 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
+from rest_framework.exceptions import AuthenticationFailed
+from django.conf import settings
 from .serializers import *
 from ..models import *
-from rest_framework.exceptions import AuthenticationFailed
+
+import stripe
 
 
 class ViewCars(viewsets.ModelViewSet):
@@ -46,8 +49,36 @@ class ViewGuy(viewsets.GenericViewSet):
             return Response({"Error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 
-class verifications_authentication_viewset(viewsets.GenericViewSet):
-    def create(self, request):
-        token = request.COOKIES.get('create_auth_token')
-        if not token:
-            raise AuthenticationFailed('Unauthenticated!')
+class Payments(viewsets.GenericViewSet):
+    def create(self, request, *args, **kwargs):
+        car_id = kwargs['pk']
+        try:
+            
+            stripe.api_key = settings.STRIPE_SECRET_KEY
+            cars = Cars.objects.get(id=car_id)
+            checkout_session = stripe.checkout.Session.create(
+                line_items=[
+                    {
+                        'price_data': {
+                            'currency': 'usd',
+                            'unit_amount': int(cars.price) * 100,
+                            'product_data': {
+                                'name': f'{cars.brand}:{cars.model}-{cars.year}',
+                                'images': [f"{settings.API_URL}/{cars.image_car}"]
+                            }
+
+                        },
+                        'quantity': 1,
+                    }
+                ],
+                mode='payment',
+                metadata={
+                    'product_id': cars.id,
+                },
+                success_url=settings.SITE_URL + '?success=true',
+                cancel_url=settings.SITE_URL + '?canceled=true',
+            )
+            return Response({"url": checkout_session.url}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"Error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
