@@ -1,5 +1,5 @@
 # proyecto-arquiler-de-autos
-<<<<<<<< HEAD:Backend/README.md
+
 
 <br>
 
