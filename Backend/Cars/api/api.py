@@ -52,6 +52,10 @@ class ViewGuy(viewsets.GenericViewSet):
 class Payments(viewsets.GenericViewSet):
     def create(self, request, *args, **kwargs):
         car_id = kwargs['pk']
+         # ? verifying cookie token
+        token = request.COOKIES.get('create_auth_token')
+        if not token:
+            raise AuthenticationFailed('Unauthenticated!')
         try:
             
             stripe.api_key = settings.STRIPE_SECRET_KEY
