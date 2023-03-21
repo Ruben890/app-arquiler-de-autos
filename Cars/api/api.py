@@ -64,7 +64,7 @@ class Payments(viewsets.GenericViewSet):
                             'unit_amount': int(cars.price) * 100,
                             'product_data': {
                                 'name': f'{cars.brand}:{cars.model}-{cars.year}',
-                                'images': [f"{settings.API_URL}/{cars.image_car}"]
+                                'images': [f'{settings.API_URL}/{cars.image_car}']
                             }
 
                         },
