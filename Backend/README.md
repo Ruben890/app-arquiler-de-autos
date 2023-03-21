@@ -1,4 +1,5 @@
 # proyecto-arquiler-de-autos
+<<<<<<<< HEAD:Backend/README.md
 
 <br>
 
@@ -74,3 +75,6 @@ se encuentra el proyecto usando la consola, para luego ejecutar los siguientes c
 <hr>
 
 </ul>
+========
+proyecto-arquiler-de-autos
+>>>>>>>> main:README.md

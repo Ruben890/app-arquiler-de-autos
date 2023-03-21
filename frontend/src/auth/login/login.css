@@ -1,0 +1,107 @@
+.form-group {
+  margin-top: 5rem;
+  border: #202020 solid 1px;
+  border-radius: 5px;
+}
+
+.btn-password {
+  background: none;
+  border: none;
+}
+
+.password-hidden p {
+  position: relative;
+  top: 5px;
+  margin-left: 0.5rem;
+  text-align: center;
+}
+.password-hidden {
+  position: relative;
+  left: 1rem;
+}
+
+.login_googles a {
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  color: #202020;
+  background-color: #fff;
+}
+.login_googles a:hover {
+  transition: all 0.5s;
+  background-color: rgb(238, 235, 235);
+}
+.login_googles p {
+  position: relative;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 18px;
+}
+
+.login_googles img {
+  margin: 1px;
+  width: 2.5rem;
+}
+
+.login_facebook img {
+  margin: 1px;
+  width: 2.8rem;
+}
+.login_facebook {
+  margin-top: 1.2rem;
+}
+
+.login_facebook a {
+  background-color: #0e5dd3;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  width: 20rem;
+  text-decoration: none;
+  color: #202020;
+}
+.login_facebook a:hover {
+  transition: all 0.5s;
+  background-color: #14458f;
+}
+
+.login_facebook p {
+  position: relative;
+  top: 0.8rem;
+  left: 0.5rem;
+  font-size: 18px;
+  color: #fff;
+}
+.register {
+  position: relative;
+  top: 0.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-group {
+    border: none;
+    border-radius: 0px;
+  }
+
+  .login_googles a:hover {
+    transition: all 0s;
+    background-color: rgb(238, 235, 235);
+  }
+
+  .login_googles a {
+    background-color: rgb(238, 235, 235);
+  }
+
+  .login_facebook a:hover {
+    transition: none;
+    background-color: #14458f;
+  }
+
+  .login_facebook a {
+    transition: none;
+    background-color: #14458f;
+  }
+}
