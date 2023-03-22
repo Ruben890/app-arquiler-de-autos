@@ -52,12 +52,12 @@ class ViewGuy(viewsets.GenericViewSet):
 class Payments(viewsets.GenericViewSet):
     def create(self, request, *args, **kwargs):
         car_id = kwargs['pk']
-         # ? verifying cookie token
+        # ? verifying cookie token
         token = request.COOKIES.get('create_auth_token')
         if not token:
             raise AuthenticationFailed('Unauthenticated!')
         try:
-            
+
             stripe.api_key = settings.STRIPE_SECRET_KEY
             cars = Cars.objects.get(id=car_id)
             checkout_session = stripe.checkout.Session.create(
@@ -68,7 +68,11 @@ class Payments(viewsets.GenericViewSet):
                             'unit_amount': int(cars.price) * 100,
                             'product_data': {
                                 'name': f'{cars.brand}:{cars.model}-{cars.year}',
-                                'images': [f'{settings.API_URL}/{cars.image_car}']
+                                'description': f'''
+                                    Gearbox: {cars.Gearbox}
+                                    Passenger Capacity: {cars.Passenger_Capacity}
+                                    Maximum Baggage: {cars.Maximum_Baggage}''',
+                                'images': [f'{settings.API_URL}/{cars.image_car.url}']
                             }
 
                         },
