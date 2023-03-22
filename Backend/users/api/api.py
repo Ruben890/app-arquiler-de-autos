@@ -45,7 +45,7 @@ class Login(viewsets.GenericViewSet):
                             value=access_token, httponly=True)
 
         response.data = {
-            "http": 200,
+            "http": status.HTTP_200_OK,
             "message": "login Successful"
         }
         return response
