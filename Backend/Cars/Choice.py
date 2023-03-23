@@ -6,5 +6,6 @@ Gearbox = [
 
 fuel_type_cars = [
     (" gasoline", " gasoline"),
-    ("diesel", "diesel")
+    ("diesel", "diesel"),
+    ("electric", "electric"),
 ]

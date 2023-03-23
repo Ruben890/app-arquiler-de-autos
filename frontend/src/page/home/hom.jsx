@@ -1,13 +1,17 @@
 import React from "react";
+import { Cardcars } from "../../Components/card/card";
 import { Footer } from "../../Components/footer/footer";
 import Header from "../../Components/header/header";
-import { Main } from "../../Components/main/main";
+
 const Home = () => {
     return (
         <>
             <Header />
-            <Main />
+            <main className="container">
+               <Cardcars/>
+            </main>
             <Footer />
+
         </>
     )
 }
