@@ -6,6 +6,5 @@ const CarsAPI = axios.create({
 
 export const getCars = async () => {
     const res = await CarsAPI.get('car/')
-    console.log(res)
     return res.data
 }

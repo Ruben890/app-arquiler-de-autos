@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
             <Header />
-            <main className="container">
+            <main className="container Home_page">
                <Cardcars/>
             </main>
             <Footer />
