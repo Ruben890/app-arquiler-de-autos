@@ -1,0 +1,13 @@
+.Home_page>.Cars {
+    display: flex;
+    overflow: auto;
+
+}
+
+.Home_page>.Cars div {
+    width: 18rem;
+}
+
+.Home_page>.carsPagination {
+    display: none;
+}

@@ -4,6 +4,7 @@ import Login from '../auth/login/login';
 import { SignUp } from '../auth/log_in/Sign_up';
 import About from '../page/about/about';
 import { Contact } from '../page/Contact/Contact';
+import { Vehicles } from '../page/Vehicles/vehicles';
 const Routers = () => {
     return (
         <BrowserRouter>
@@ -13,6 +14,7 @@ const Routers = () => {
                 <Route path="/Sign_up" element={<SignUp />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path='/Vehicles' element={<Vehicles />} />
             </Routes>
         </BrowserRouter>
     )

@@ -1,4 +1,6 @@
-.Home_page {
-    display: flex;
-    flex-wrap: wrap;
+.card_cars{
+    cursor: pointer;
+    background-color: #fff;
+    height: 24rem;
+    border: 1px solid #202020a4;
 }

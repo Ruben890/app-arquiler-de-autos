@@ -15,7 +15,7 @@ export const NavHeader = () => {
                 <div className="collapse navbar-collapse w-100 p-1 justify-content-between" id="navbarNavDropdown">
                     <ul className="d-flex option navbar-nav">
                         <li className="me-5">
-                          <Link to="/" title='vehicles' className='nav-link navbar-link'>Vehicles</Link>
+                            <Link to="/Vehicles" title='vehicles' className='nav-link navbar-link'>Vehicles</Link>
                         </li>
 
                         <li className="me-5">
