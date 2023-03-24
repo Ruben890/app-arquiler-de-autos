@@ -21,16 +21,6 @@ export const NavHeader = () => {
                         <li className="me-5">
                             <Link to="/contact" title="Contact" className="nav-link navbar-link">Contact</Link>
                         </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle navbar-link" href=" " role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                services
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href=" ">Action</a></li>
-                                <li><a className="dropdown-item" href=" ">Another action</a></li>
-                                <li><a className="dropdown-item" href=" ">Something else here</a></li>
-                            </ul>
-                        </li>
                     </ul>
                     <ul className="d-flex me-5 login_log_in navbar-nav">
                         <li className="me-5  login">
