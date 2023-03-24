@@ -13,7 +13,7 @@ export const Cardcars = () => {
     if (error) return <div> <p className='text-danger'>error:{error.message}</p></div>
 
 
-    return cars.map((cars) => {
+    return cars.results.map((cars) => {
         return <div key={cars.id} className='card mt-5 mb-5 me-3 ms-3' style={{ width: "18rem", cursor: "pointer" }}>
             <img src={cars.image_car} alt={cars.brand.brand} className='card-img-top' />
             <div className='card-body'>
