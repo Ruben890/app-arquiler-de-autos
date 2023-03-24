@@ -15,13 +15,15 @@
   width: 1.5rem;
 }
 
-nav .option .navbar-link {
+nav .option .navbar-link,
+.form_search {
   text-align: center;
   width: rem;
   font-size: 19px;
   text-decoration: none;
   color: #fff;
 }
+
 nav .option .navbar-link:hover {
   transition: all 0.3s;
   background-color: rgba(255, 255, 255, 0.493);
@@ -29,6 +31,7 @@ nav .option .navbar-link:hover {
   color: #202020;
   border-bottom: 5px solid #1289a7;
 }
+
 nav .login_log_in li a {
   width: 8rem;
   text-align: center;
@@ -39,18 +42,35 @@ nav .login_log_in li a {
   background-color: #1289a7;
 }
 
+/*from_search*/
+.form_search input {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #202020;
+  color: #fff;
+  width: 15rem;
+}
+
+
+
+
+
 nav .login_log_in li a:hover {
   transition: all 0.5s;
   background-color: #1b1464;
   box-shadow: #1b14647c 8px 10px 12px;
-  color:#fff
+  color: #fff
 }
+
 @media only screen and (max-width: 990px) {
   .option li {
     justify-content: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
   .option li .navbar-link {
     width: 100%;
   }
@@ -61,15 +81,22 @@ nav .login_log_in li a:hover {
     left: 1.5rem;
     width: 100%;
   }
+
   nav .login_log_in li:nth-child(2) a {
     width: 100%;
   }
+
   .login_log_in li {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 }
+
 @media only screen and (max-width: 600px) {
+  .form_search {
+    justify-content: center;
+  }
+
   .option li a:hover {
     transition: none;
     padding-top: 0px;
@@ -78,6 +105,7 @@ nav .login_log_in li a:hover {
     background: none;
     box-shadow: none;
   }
+
   .login_log_info li a:hover {
     border: none;
     background: none;

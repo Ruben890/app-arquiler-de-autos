@@ -21,6 +21,12 @@ export const NavHeader = () => {
                         <li className="me-5">
                             <Link to="/contact" title="Contact" className="nav-link navbar-link">Contact</Link>
                         </li>
+
+                        <li className='me-5'>
+                            <form className="nav-link form_search d-flex">
+                                <input type="text" placeholder='search' />
+                            </form>
+                        </li>
                     </ul>
                     <ul className="d-flex me-5 login_log_in navbar-nav">
                         <li className="me-5  login">
