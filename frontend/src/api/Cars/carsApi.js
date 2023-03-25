@@ -12,6 +12,5 @@ export const GetCarsPagination = async (page = 1) => {
 
 export const GetSearchCars = async (query) => {
     const res = await CarsAPI.get(`car/?search=${query}`)
-    console.log(res.data)
     return res.data
 }
