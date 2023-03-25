@@ -17,7 +17,7 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = []
 
-###? Stripe Keys
+# ? Stripe Keys
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
 
@@ -51,8 +51,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = "core.urls"
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://localhost:4200'
+    'http://localhost:5174',
 ]
 
 
@@ -135,6 +134,6 @@ MEDIA_ROOT = BASE_DIR / "media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-###? URLS
-SITE_URL = "http://localhost:3000/"
+# ? URLS
+SITE_URL = "http://localhost:5174/"
 API_URL = "http://localhost:8000/"
