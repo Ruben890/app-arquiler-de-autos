@@ -80,18 +80,19 @@ nav .login_log_in li a {
   overflow: auto;
 }
 
-.results_search::-webkit-scrollbar-thumb{
-  border-radius:8px;
+.results_search::-webkit-scrollbar-thumb {
+  border-radius: 8px;
   background: #1b1464;
 }
 
-.results_search::-webkit-scrollbar{
+.results_search::-webkit-scrollbar {
   background: none;
   width: 5px;
 }
 
 /* data Search */
 .card_search {
+  cursor: pointer;
   background-color: #fff;
   border: none;
   margin: 8px;
@@ -132,7 +133,7 @@ nav .login_log_in li a:hover {
     display: none;
   }
 
-  
+
   /* data Search */
   .results_search {
     left: 0rem;
