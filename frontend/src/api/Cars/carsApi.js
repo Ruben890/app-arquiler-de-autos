@@ -7,6 +7,11 @@ const CarsAPI = axios.create({
 export const GetCarsPagination = async (page = 1) => {
 
     const res = await CarsAPI.get(`car/?page=${page}`)
-    console.log(res.data)
     return res.data
 }
+
+// export const GetSearchCars = async () => {
+//     const res = await CarsAPI.get(`cars_search/`)
+//     console.log(res.data)
+//     return res.data
+// }

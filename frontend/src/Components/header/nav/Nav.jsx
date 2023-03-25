@@ -3,8 +3,11 @@ import 'bootstrap/dist/js/bootstrap'
 import "../nav/nav.css";
 import { Link } from 'react-router-dom';
 import menu_mobil from "../../../asset/IMG/menu.png"
+import { useState } from 'react';
+
 
 export const NavHeader = () => {
+    const [inputSearch, setInputSearch] = useState("");
     return (
         <nav className="navbar navbar-expand-lg  w-100" >
             <div className='container-fluid'>
@@ -24,8 +27,15 @@ export const NavHeader = () => {
 
                         <li className='me-5'>
                             <form className="nav-link form_search d-flex">
-                                <input type="text" placeholder='search' />
+                                <input type="text" placeholder='search'
+                                    value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
                             </form>
+
+                            {inputSearch === "" ? "" : <div className='results_search'>
+                                {inputSearch}
+                            </div>}
+
+
                         </li>
                     </ul>
                     <ul className="d-flex me-5 login_log_in navbar-nav">

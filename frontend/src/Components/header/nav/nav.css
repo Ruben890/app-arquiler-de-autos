@@ -52,10 +52,23 @@ nav .login_log_in li a {
   color: #fff;
   width: 15rem;
 }
-.form_search input::placeholder{
+
+.form_search input::placeholder {
   color: #fff;
 }
 
+/*results_search*/
+
+.results_search {
+  position: absolute;
+  background-color: #ffffff98;
+  padding: 15px;
+  width: 15rem;
+  border-radius: 15px;
+  height: 15rem;
+  box-shadow: 8px 8px 8px #00000070;
+  overflow: auto;
+}
 
 nav .login_log_in li a:hover {
   transition: all 0.5s;

@@ -1,11 +1,11 @@
-from rest_framework import viewsets, status
+from rest_framework import viewsets, status, generics
 from rest_framework.response import Response
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.pagination import PageNumberPagination
 from django.conf import settings
+from rest_framework.filters import SearchFilter
 from .serializers import *
 from ..models import *
-
 import stripe
 
 
@@ -13,12 +13,16 @@ class CustomPagination(PageNumberPagination):
     page_size = 10
     page_size_query_param = 'page_size'
     max_page_size = 100
+    
+    
 
 
 class ViewCars(viewsets.ModelViewSet):
     serializer_class = CarSerializer
     queryset = CarSerializer.Meta().model.objects.all()
     pagination_class = CustomPagination
+    filter_backends = [SearchFilter]
+    search_fields = ['brand__brand', 'model']
 
 
 class ViewYear(viewsets.GenericViewSet):

@@ -31,7 +31,7 @@ class brand_cars(models.Model):
         return self.brand
 
     class Meta:
-        ordering = ('brand',)
+        ordering = ['brand']
 
 
 class Cars (models.Model):
