@@ -18,7 +18,7 @@ export const Cardcars = () => {
         <>
             <section className='Cars'>
                 {cars.results.map((cars) => {
-                    return <div key={cars.id} className='card_cars mt-5 mb-2 me-3 ms-3 rounded '>
+                    return <div key={cars.id} className='card_cars mt-5 mb-2 me-3 ms-3 rounded'>
                         <img src={cars.image_car} alt={cars.brand.brand} className='cars-img w-100 rounded-top ' height="200" width="250" style={{ objectFit: "cover" }} />
                         <div className='p-3'>
                             <h5 className='card-title'>{cars.brand.brand}:{cars.model}-{cars.year.year}</h5>

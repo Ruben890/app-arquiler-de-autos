@@ -43,31 +43,69 @@ nav .login_log_in li a {
 }
 
 /*from_search*/
-.form_search input {
+
+.search_movil input {
+  display: none;
+}
+
+.search_movil .results_search {
+  display: none;
+}
+
+
+.search input {
   font-size: 18px;
   border: none;
   outline: none;
   background: none;
   border-bottom: 1px solid #202020;
   color: #fff;
-  width: 15rem;
+  width: 22rem;
 }
 
-.form_search input::placeholder {
+.search input::placeholder {
   color: #fff;
 }
 
 /*results_search*/
-
 .results_search {
   position: absolute;
+  top: 4rem;
+  left: 8rem;
   background-color: #ffffff98;
   padding: 15px;
-  width: 15rem;
   border-radius: 15px;
   height: 15rem;
   box-shadow: 8px 8px 8px #00000070;
   overflow: auto;
+}
+
+.results_search::-webkit-scrollbar-thumb{
+  border-radius:8px;
+  background: #1b1464;
+}
+
+.results_search::-webkit-scrollbar{
+  background: none;
+  width: 5px;
+}
+
+/* data Search */
+.card_search {
+  background-color: #fff;
+  border: none;
+  margin: 8px;
+}
+
+
+
+.card_search img {
+  width: 15rem;
+  object-fit: cover;
+}
+
+.card_search div {
+  padding: 8px;
 }
 
 nav .login_log_in li a:hover {
@@ -78,6 +116,29 @@ nav .login_log_in li a:hover {
 }
 
 @media only screen and (max-width: 990px) {
+  .search_movil .results_search {
+    display: block;
+  }
+
+  .search_movil input {
+    display: block;
+  }
+
+  .search_desktop input {
+    display: none;
+  }
+
+  .search_desktop .results_search {
+    display: none;
+  }
+
+  
+  /* data Search */
+  .results_search {
+    left: 0rem;
+  }
+
+
   .option li {
     justify-content: center;
     margin-top: 1rem;
@@ -106,8 +167,27 @@ nav .login_log_in li a:hover {
 }
 
 @media only screen and (max-width: 600px) {
+
+
+
+  .search_movil input {
+    display: block;
+  }
+
+  .search_movil .results_search {
+    display: block;
+  }
+
   .form_search {
     justify-content: center;
+  }
+
+  .search_desktop input {
+    display: none;
+  }
+
+  .search_desktop .results_search {
+    display: none;
   }
 
   .option li a:hover {
@@ -123,5 +203,15 @@ nav .login_log_in li a:hover {
     border: none;
     background: none;
     box-shadow: none;
+  }
+
+  /* data Search */
+  .results_search {
+    left: 0rem;
+  }
+
+  .card_search img {
+    width: 8rem;
+    object-fit: cover;
   }
 }
