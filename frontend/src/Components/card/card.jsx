@@ -7,7 +7,8 @@ import { useState } from 'react'
 export const Cardcars = () => {
     const [page, setPage] = useState(1);
     const { isLoading, data: cars, error } = useQuery(['car/', page], () => GetCarsPagination(page), {
-        keepPreviousData: true
+        keepPreviousData: true,
+        staleTime: 30000
     })
 
     if (isLoading) return <section className='Cars'> <CardPlaceholders number_card={10} /></section>

@@ -100,7 +100,7 @@ nav .login_log_in li a {
 
 
 
-.card_search img {
+.card_search .img_search {
   width: 15rem;
   object-fit: cover;
 }
@@ -211,7 +211,7 @@ nav .login_log_in li a:hover {
     left: 0rem;
   }
 
-  .card_search img {
+  .card_search .img_search {
     width: 8rem;
     object-fit: cover;
   }

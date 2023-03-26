@@ -6,10 +6,13 @@ import menu_mobil from "../../../asset/IMG/menu.png"
 import { useState } from 'react';
 import { GetSearchCars } from '../../../api/Cars/carsApi';
 import { useQuery } from '@tanstack/react-query'
+import { CardSearchPlaceholder } from '../../card/Placeholders/card_Placeholders';
 
 export const NavHeader = () => {
     const [inputSearch, setInputSearch] = useState("");
-    const { isLoading, data: query, error } = useQuery(['search', inputSearch], () => GetSearchCars(inputSearch), { keepPreviousData: true })
+    const { data: query, error } = useQuery(['search', inputSearch], () => GetSearchCars(inputSearch), { keepPreviousData: true })
+
+    if (error) return <div> <p>error:{error.message}</p></div>
     return (
         <nav className="navbar navbar-expand-lg  w-100" >
             <div className='container-fluid'>
@@ -22,7 +25,7 @@ export const NavHeader = () => {
                     {inputSearch === "" ? "" : <div className='results_search w-100'>
                         {query.results.map(query => {
                             return <div className='card_search d-flex rounded'>
-                                <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3" />
+                                <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                 <div className='w-100'>
                                     <h5>{query.brand.brand}:{query.model}-{query.year.year}</h5>
                                     <p> <b>{query.guys.guys} </b></p>
@@ -54,7 +57,7 @@ export const NavHeader = () => {
                                 {inputSearch === "" ? "" : <div className='results_search w-50'>
                                     {query.results.map(query => {
                                         return <div className='card_search d-flex rounded'>
-                                            <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3" />
+                                            <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                             <div className='w-100'>
                                                 <h5 className='title_search'>{query.brand.brand}:{query.model}-{query.year.year}</h5>
                                                 <p> <b>{query.guys.guys} </b></p>
