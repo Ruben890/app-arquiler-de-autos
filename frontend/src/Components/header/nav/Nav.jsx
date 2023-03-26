@@ -19,11 +19,8 @@ export const NavHeader = () => {
                 <Link className="navbar-brand" to="/"><img src='' alt='logo' title='logo' /></Link>
 
                 <div className="nav-link search_movil  search d-flex">
-                    <form>
-                        <input type="search" placeholder='search'
-                            value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
-                    </form>
-
+                    <input type="search" placeholder='search'
+                        value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
 
                     {inputSearch === "" ? "" : <div className='results_search w-100'>
                         {query.results.map(query => {
@@ -54,10 +51,8 @@ export const NavHeader = () => {
 
                         <li className='me-5'>
                             <div className="nav-link search_desktop  search d-flex">
-                                <form>
-                                    <input type="search" placeholder='search'
-                                        value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
-                                </form>
+                                <input type="search" placeholder='search'
+                                    value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
 
                                 {inputSearch === "" ? "" : <div className='results_search w-50'>
                                     {query.results.map(query => {
