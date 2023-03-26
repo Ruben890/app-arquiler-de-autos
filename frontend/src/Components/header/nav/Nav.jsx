@@ -6,7 +6,7 @@ import menu_mobil from "../../../asset/IMG/menu.png"
 import { useState } from 'react';
 import { GetSearchCars } from '../../../api/Cars/carsApi';
 import { useQuery } from '@tanstack/react-query'
-import { CardSearchPlaceholder } from '../../card/Placeholders/card_Placeholders';
+
 
 export const NavHeader = () => {
     const [inputSearch, setInputSearch] = useState("");
@@ -24,7 +24,7 @@ export const NavHeader = () => {
 
                     {inputSearch === "" ? "" : <div className='results_search w-100'>
                         {query.results.map(query => {
-                            return <div className='card_search d-flex rounded'>
+                            return <form className='card_search d-flex rounded'>
                                 <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                 <div className='w-100'>
                                     <h5>{query.brand.brand}:{query.model}-{query.year.year}</h5>
@@ -32,7 +32,7 @@ export const NavHeader = () => {
                                     <hr />
                                     <p className='fs-5'>{query.price}/USD</p>
                                 </div>
-                            </div>
+                            </form>
                         })}
                     </div>}
                 </div>
@@ -56,7 +56,7 @@ export const NavHeader = () => {
 
                                 {inputSearch === "" ? "" : <div className='results_search w-50'>
                                     {query.results.map(query => {
-                                        return <div className='card_search d-flex rounded'>
+                                        return <form className='card_search d-flex rounded'>
                                             <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                             <div className='w-100'>
                                                 <h5 className='title_search'>{query.brand.brand}:{query.model}-{query.year.year}</h5>
@@ -64,7 +64,7 @@ export const NavHeader = () => {
                                                 <hr />
                                                 <p className='fs-5'>{query.price}/USD</p>
                                             </div>
-                                        </div>
+                                        </form>
                                     })}
                                 </div>}
                             </div>
