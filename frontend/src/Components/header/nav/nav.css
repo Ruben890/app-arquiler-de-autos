@@ -209,8 +209,12 @@ nav .login_log_in li a:hover {
   /* data Search */
   .results_search {
     left: 0rem;
+    top: 4rem;
   }
-
+  
+  .search input {
+    width: 12rem;
+  }
   .card_search .img_search {
     width: 8rem;
     object-fit: cover;
