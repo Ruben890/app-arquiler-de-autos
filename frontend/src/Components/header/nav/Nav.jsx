@@ -19,12 +19,15 @@ export const NavHeader = () => {
                 <Link className="navbar-brand" to="/"><img src='' alt='logo' title='logo' /></Link>
 
                 <div className="nav-link search_movil  search d-flex">
-                    <input type="search" placeholder='search'
-                        value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
+                    <form>
+                        <input type="search" placeholder='search'
+                            value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
+                    </form>
+
 
                     {inputSearch === "" ? "" : <div className='results_search w-100'>
                         {query.results.map(query => {
-                            return <form className='card_search d-flex rounded'>
+                            return <div className='card_search d-flex rounded'>
                                 <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                 <div className='w-100'>
                                     <h5>{query.brand.brand}:{query.model}-{query.year.year}</h5>
@@ -32,7 +35,7 @@ export const NavHeader = () => {
                                     <hr />
                                     <p className='fs-5'>{query.price}/USD</p>
                                 </div>
-                            </form>
+                            </div>
                         })}
                     </div>}
                 </div>
@@ -51,12 +54,14 @@ export const NavHeader = () => {
 
                         <li className='me-5'>
                             <div className="nav-link search_desktop  search d-flex">
-                                <input type="search" placeholder='search'
-                                    value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
+                                <form>
+                                    <input type="search" placeholder='search'
+                                        value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
+                                </form>
 
                                 {inputSearch === "" ? "" : <div className='results_search w-50'>
                                     {query.results.map(query => {
-                                        return <form className='card_search d-flex rounded'>
+                                        return <div className='card_search d-flex rounded'>
                                             <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                             <div className='w-100'>
                                                 <h5 className='title_search'>{query.brand.brand}:{query.model}-{query.year.year}</h5>
@@ -64,7 +69,7 @@ export const NavHeader = () => {
                                                 <hr />
                                                 <p className='fs-5'>{query.price}/USD</p>
                                             </div>
-                                        </form>
+                                        </div>
                                     })}
                                 </div>}
                             </div>
