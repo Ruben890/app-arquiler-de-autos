@@ -69,6 +69,7 @@ nav .login_log_in li a {
 
 /*results_search*/
 .results_search {
+  z-index: 2;
   position: absolute;
   top: 4rem;
   left: 8rem;

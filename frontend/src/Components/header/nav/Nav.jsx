@@ -24,7 +24,7 @@ export const NavHeader = () => {
 
                     {inputSearch === "" ? "" : <div className='results_search w-100'>
                         {query.results.map(query => {
-                            return <div className='card_search d-flex rounded'>
+                            return <div key={query.id} className='card_search d-flex rounded'>
                                 <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                 <div className='w-100'>
                                     <h5>{query.brand.brand}:{query.model}-{query.year.year}</h5>
@@ -56,7 +56,7 @@ export const NavHeader = () => {
 
                                 {inputSearch === "" ? "" : <div className='results_search w-50'>
                                     {query.results.map(query => {
-                                        return <div className='card_search d-flex rounded'>
+                                        return <div key={query.id} className='card_search d-flex rounded'>
                                             <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
                                             <div className='w-100'>
                                                 <h5 className='title_search'>{query.brand.brand}:{query.model}-{query.year.year}</h5>
