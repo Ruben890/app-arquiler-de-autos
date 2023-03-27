@@ -41,7 +41,12 @@ class Profiles(AbstractBaseUser):
     image = models.ImageField(
         upload_to="image/users", null=True, blank=True, verbose_name="user image"
     )
-    opt = models.CharField(max_length=25, blank=True, null=True, unique=True,)
+    Country = models.CharField(
+        'Country', max_length=150, blank=False, null=False)
+    address = models.CharField(
+        'Address', max_length=250, blank=False, null=False)
+    Street = models.CharField('Street', max_length=50, blank=False, null=False)
+    opt = models.CharField(max_length=50, blank=True, null=True, unique=True)
     is_validate = models.BooleanField(default=False)
     user_active = models.BooleanField(default=True)
     user_admin = models.BooleanField(default=False)
