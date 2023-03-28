@@ -25,14 +25,6 @@ const Login = () => {
                                 <p>start section with google</p>
                             </a>
                         </div>
-                        <div className="login_facebook">
-                            <a href="/" alt=".." title="facebook" className="d-flex">
-                                <img src={Facebook_ico} title={Facebook_ico} alt=".." />
-                                <p>Start section with Facebook</p>
-                            </a>
-                        </div>
-
-
                     </div>
                     <div className="d-flex justify-content-center mt-3">
                         <button type="submit" className="btn btn-primary w-50">Login</button>

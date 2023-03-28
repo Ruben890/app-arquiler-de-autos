@@ -31,6 +31,9 @@ urlpatterns = [
             cache_timeout=0), name='schema-swagger-ui'),
     re_path(r'^redoc/$', schema_view.with_ui('redoc',
                                              cache_timeout=0), name='schema-redoc'),
+    # OAuth
+    re_path(r'^auth/', include('drf_social_oauth2.urls', namespace='drf')),
+
     path("admin/", admin.site.urls),
     path("Cars/", include("Cars.api.routers")),
     path("users/", include("users.api.routers")),
