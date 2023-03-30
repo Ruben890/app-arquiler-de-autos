@@ -8,3 +8,7 @@ Frontend en ReactJS
 <h1> Descripción:</h1>
 <p>Esta aplicación web de alquiler de autos con pasarela de pago Stripe he login con Google, manejo de usuarios y autenticación con JWT.
 </p>
+
+<hr/>
+
+<img src="/img/img.png" alt='readme_img'/>
