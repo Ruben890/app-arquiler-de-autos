@@ -37,6 +37,7 @@ $ pip install -r requirements.txt
 
   <p>###GOOGLE_KEYS: </p>
   <li>🔐SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = " "</li>
+  <li>🔐SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''</li>
   <hr>
   
   <p>###GOOGLE KEY: </p>
