@@ -35,10 +35,15 @@ $ pip install -r requirements.txt
   <li>💻DEBUG = True/False</li>
   <hr>
 
-  <p>###SCRAPE_KEYS: </p>
+  <p>###GOOGLE_KEYS: </p>
+  <li>🔐SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = " "</li>
+  <hr>
+  
+  <p>###GOOGLE KEY: </p>
   <li>🔐STRIPE_SECRET_KEY = " "</li>
   <li>🔐STRIPE_PUBLIC_KEY = " "</li>
   <hr>
+  
   
   <p>###📄Database information</p>
   <li>NAME = 'Backend_autos_arquiler'</li>
