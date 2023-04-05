@@ -12,7 +12,7 @@ const Login = () => {
     const loginUser = useMutation({
         mutationFn: UsersLogin,
         onSuccess: () => {
-            return redirect('/')
+           console.log('login success');
         },
         onError: (error) => {
             const message = error.response.data.detail;
