@@ -32,11 +32,11 @@ class Login(viewsets.GenericViewSet):
         user = Profiles.objects.filter(email=email).first()
         # ?confirm if the email is correct
         if user is None:
-            raise AuthenticationFailed("Users not found")
+            raise AuthenticationFailed("email is invalid")
 
         # ?confirm if the password is correct
         if not user.check_password(password):
-            raise AuthenticationFailed("Users password is incorrect")
+            raise AuthenticationFailed("Incorrect password")
         # ?generic token
         access_token = create_auth_token(user.id)
         # ? configuration cookie
