@@ -6,11 +6,15 @@ import menu_mobil from "../../../asset/IMG/menu.png"
 import { useState } from 'react';
 import { GetSearchCars } from '../../../api/Cars/carsApi';
 import { useQuery } from '@tanstack/react-query'
-
+import { GetListUsers } from '../../../api/UsersManage/userManage';
 
 export const NavHeader = () => {
     const [inputSearch, setInputSearch] = useState("");
     const { data: query, error } = useQuery(['search', inputSearch], () => GetSearchCars(inputSearch), { keepPreviousData: true })
+
+    const { data: user } = useQuery({
+        queryFn: GetListUsers,
+    })
 
     if (error) return <div> <p>error:{error.message}</p></div>
     return (
@@ -54,7 +58,7 @@ export const NavHeader = () => {
                                 <input type="search" placeholder='search'
                                     value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} />
 
-                                {inputSearch === "" ? "" : <div className='results_search w-50'>
+                                {inputSearch && <div className='results_search w-50'>
                                     {query.results.map(query => {
                                         return <div key={query.id} className='card_search d-flex rounded'>
                                             <img src={query.image_car} alt={query.brand.brand} className="rounded-start me-3 img_search" />
